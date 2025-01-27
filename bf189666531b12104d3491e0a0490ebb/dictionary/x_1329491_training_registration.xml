@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="aec2e6a2535b12104d3491e0a0490edc" extends="task" label="Registration" max_length="40" name="x_1329491_training_registration" type="collection">
+        <element display="true" label="Training" max_length="32" name="training" reference="x_1329491_training_training_calendar" type="reference"/>
+    </element>
+</database>

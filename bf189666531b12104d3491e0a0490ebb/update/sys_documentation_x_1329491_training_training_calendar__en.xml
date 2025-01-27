@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Training_Calendar" language="en" table="x_1329491_training_training_calendar">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Training_Calendar</label>
+            <language>en</language>
+            <name>x_1329491_training_training_calendar</name>
+            <plural>Training_Calendars</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-27 19:53:30</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Training_Calendar</sys_name>
+            <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+            <sys_update_name>sys_documentation_x_1329491_training_training_calendar__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-27 19:53:30</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
