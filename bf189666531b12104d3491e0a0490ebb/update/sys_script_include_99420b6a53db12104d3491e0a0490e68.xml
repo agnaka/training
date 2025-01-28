@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1329491_training.getTrainingInstructorRole</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>This script includes defines a class that can be used to retrieve users assigned with a specific training instructor role in ServiceNow</description>
+        <mobile_callable>false</mobile_callable>
+        <name>getTrainingInstructorRole</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var getTrainingInstructorRole = Class.create();
+getTrainingInstructorRole.prototype = {
+    initialize: function() {
+    },
+	getInstructorUser : function() {
+		var roleG = new GlideRecord('sys_user_has_role');
+		roleG.addEncodedQuery('role.name=x_1329491_training.instructor^state=active');
+		roleG.query();
+
+		var instructorUser = [];
+
+		while(roleG.next()) {
+			instructorUser.push(roleG.getValue('user'));
+		}
+
+		return 'sys_idIN' + instructorUser;
+	},
+
+    type: 'getTrainingInstructorRole'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:51:04</sys_created_on>
+        <sys_id>99420b6a53db12104d3491e0a0490e68</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>getTrainingInstructorRole</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_update_name>sys_script_include_99420b6a53db12104d3491e0a0490e68</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 23:36:50</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>99420b6a53db12104d3491e0a0490e68</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:51:04</sys_created_on>
+        <sys_id>0f950faa53db12104d3491e0a0490e51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 22:51:04</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

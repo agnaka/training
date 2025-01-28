@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="35fc96ea531b12104d3491e0a0490e48" label="Training_Calendar" max_length="40" name="x_1329491_training_training_calendar" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.training.name + &quot; - &quot; + current.date.getDisplayValue();  &#13;&#10;&#9;// return the calculated value&#13;&#10;&#13;&#10;})(current);" default="var course = current.training.name;&#13;&#10;var date = current.date.getDisplayValue(); &#13;&#10;answer = course + &quot; - &quot; + date; &#13;&#10;" display="true" label="Display Course Date" max_length="4000" name="default_value" read_only="true" type="string" virtual="true"/>
+        <element label="Date" max_length="40" name="date" type="glide_date"/>
         <element label="Available Seats" max_length="255" name="available_seats" type="integer"/>
-        <element display="true" label="Training" max_length="32" name="training" reference="x_1329491_training_training" type="reference"/>
-        <element label="Instructor" max_length="32" name="instructor" reference="sys_user" type="reference"/>
-        <element label="Date" max_length="255" name="date" type="glide_date_time"/>
+        <element label="Training" max_length="32" name="training" reference="x_1329491_training_training" type="reference"/>
+        <element label="Instructor" max_length="32" name="instructor" reference="sys_user" reference_qual="javascript: new getTrainingInstructorRole().getInstructorUser();" type="reference" use_reference_qualifier="advanced"/>
         <index name="index">
             <element name="instructor"/>
         </index>
