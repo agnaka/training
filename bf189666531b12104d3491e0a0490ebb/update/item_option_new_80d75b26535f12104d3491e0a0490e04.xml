@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
-        <attributes/>
+        <attributes>ref_ac_order_by=date</attributes>
         <cat_item display_value="Training Registration">6a175be2535f12104d3491e0a0490edb</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
@@ -22,7 +22,7 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field/>
+        <field>training</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -39,7 +39,7 @@
         <macro/>
         <macroponent/>
         <mandatory>false</mandatory>
-        <map_to_field>false</map_to_field>
+        <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>training</name>
@@ -49,7 +49,7 @@
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Training Calendar</question_text>
+        <question_text>Training</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -58,7 +58,7 @@
         <record/>
         <record_producer_table>x_1329491_training_registration</record_producer_table>
         <reference>x_1329491_training_training_calendar</reference>
-        <reference_qual/>
+        <reference_qual>javascript:new x_1329491_training.userDuplicateRegister().getAvailableCourses()</reference_qual>
         <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
@@ -79,14 +79,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 00:12:26</sys_created_on>
         <sys_id>80d75b26535f12104d3491e0a0490e04</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Training Calendar</sys_name>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Training</sys_name>
         <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
         <sys_update_name>item_option_new_80d75b26535f12104d3491e0a0490e04</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 00:53:34</sys_updated_on>
+        <sys_updated_on>2025-01-30 00:02:25</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
@@ -94,7 +94,7 @@
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
         <validate_regex/>
         <variable_name/>
         <variable_set/>

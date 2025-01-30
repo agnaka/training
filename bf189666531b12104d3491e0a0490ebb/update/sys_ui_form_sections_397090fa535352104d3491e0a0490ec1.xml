@@ -14,20 +14,6 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-01-28 04:18:07</sys_updated_on>
         </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-28 04:18:07</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>b57090fa535352104d3491e0a0490ec6</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_1329491_training_registration" name="x_1329491_training_registration" sys_domain="global" view="Default view">397090fa535352104d3491e0a0490ec1</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_1329491_training_registration" sys_domain="global" view="Default view">797090fa535352104d3491e0a0490e36</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-28 04:18:07</sys_updated_on>
-        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_1329491_training_registration</name>
             <roles/>

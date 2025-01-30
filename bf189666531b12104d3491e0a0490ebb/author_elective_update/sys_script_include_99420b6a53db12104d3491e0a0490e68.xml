@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_1329491_training.duplicateCourseDate</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>It should not be possible to schedule a training session for any course on a date that already has a training session for the same course</description>
+        <mobile_callable>false</mobile_callable>
+        <name>duplicateCourseDate</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var duplicateCourseDate = Class.create();
+duplicateCourseDate.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    checkDuplicateSchedule: function() {
+        var training = this.getParameter("sysparm_course");
+        var date = this.getParameter("sysparm_date");
+ 
+        var gr = new GlideRecord("x_1329491_training_training_calendar");
+        gr.addQuery('training', training);
+        gr.addQuery('date', date);
+        gr.query();
+         
+        if (gr.next()) {
+            return 'true';
+ 
+        }
+ 
+        return 'false';
+    },
+ 
+    convertToSystemDate: function (dateStr) {
+ 
+        var parts = dateStr.split('/');
+ 
+        if (parts.length === 3) {
+ 
+            return parts[2] + '-' + parts[1] + '-' + parts[0];      
+        }
+ 
+        return dateStr;
+    },
+ 
+    type: 'duplicateCourseDate'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:51:04</sys_created_on>
+        <sys_id>99420b6a53db12104d3491e0a0490e68</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>duplicateCourseDate</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_update_name>sys_script_include_99420b6a53db12104d3491e0a0490e68</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 01:46:03</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>99420b6a53db12104d3491e0a0490e68</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:51:04</sys_created_on>
+        <sys_id>0f950faa53db12104d3491e0a0490e51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 22:51:04</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training">bf189666531b12104d3491e0a0490ebb</application>
+        <file_path/>
+        <instance_id>c2f13af1db014a5437d72a59139619f8</instance_id>
+        <instance_name>dev247250</instance_name>
+        <name>sys_script_include_99420b6a53db12104d3491e0a0490e68</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_1329491_training.duplicateCourseDate&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;It should not be possible to schedule a training session for any course on a date that already has a training session for the same course&lt;/description&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;duplicateCourseDate&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var duplicateCourseDate = Class.create();
+duplicateCourseDate.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    checkDuplicateSchedule: function() {
+        var training = this.getParameter("sysparm_course");
+        var date = this.getParameter("sysparm_date");
+ 
+        var gr = new GlideRecord("x_1329491_training_training_calendar");
+        gr.addQuery('training', training);
+        gr.addQuery('date', date);
+        gr.query();
+         
+        if (gr.next()) {
+            return 'true';
+ 
+        }
+ 
+        return 'false';
+    },
+ 
+    convertToSystemDate: function (dateStr) {
+ 
+        var parts = dateStr.split('/');
+ 
+        if (parts.length === 3) {
+ 
+            return parts[2] + '-' + parts[1] + '-' + parts[0];      
+        }
+ 
+        return dateStr;
+    },
+ 
+    type: 'duplicateCourseDate'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-27 22:51:04&lt;/sys_created_on&gt;&lt;sys_id&gt;99420b6a53db12104d3491e0a0490e68&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_name&gt;duplicateCourseDate&lt;/sys_name&gt;&lt;sys_package display_value="Training" source="x_1329491_training"&gt;bf189666531b12104d3491e0a0490ebb&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Training"&gt;bf189666531b12104d3491e0a0490ebb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_99420b6a53db12104d3491e0a0490e68&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-29 01:46:03&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;99420b6a53db12104d3491e0a0490e68&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-27 22:51:04&lt;/sys_created_on&gt;&lt;sys_id&gt;0f950faa53db12104d3491e0a0490e51&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-27 22:51:04&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-609013067</payload_hash>
+        <record_name>duplicateCourseDate</record_name>
+        <reverted_from/>
+        <source>61633a66539b12104d3491e0a0490ee0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 01:46:03</sys_created_on>
+        <sys_id>3337fc8f53d792104d3491e0a0490e6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194afbca3c80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 01:46:03</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>b737fc8f6cd79210fbfaf169d4fb7d6d</update_guid>
+        <update_guid_history>b737fc8f6cd79210fbfaf169d4fb7d6d:-609013067,0c385b3e7113921016991122dcacf9e9:76069542,e5f65bb6ac1392104f2ab45e8941bb43:-613599699,4f5d7afaf89f52109cca11b6cce52326:464899542,565c36fa449f5210a7bbfc98c200d5c1:276963227,9d101f6a141f121047e85c45e198da62:1560970064,472b4b268d1f12108c3b9ab6efe83555:-1891884647,e6ba0ba2051f12100f03cbc55e285cb9:-276077202,65590762b61f12103005e3938b784d30:-1413577791,8ab80722bb1f1210b51cc7979b315978:185658276,11c7c322811f12101cba722b434dacf3:-1132534402,26374beef9db12100d3923083bd5ac46:-1122201487,97950b6e05db12104f6852f3b8671325:-2057592329</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 12:15:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>9e2b88d5afc24310acb3bdeb424f4a40</sys_id>
+        <sys_metadata>99420b6a53db12104d3491e0a0490e68</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>duplicateCourseDate</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_scope_delete display_value="">60c738f1bfe2456081b63b7764201040</sys_scope_delete>
+        <sys_update_name>sys_script_include_99420b6a53db12104d3491e0a0490e68</sys_update_name>
+        <sys_update_version display_value="sys_script_include_99420b6a53db12104d3491e0a0490e68">3337fc8f53d792104d3491e0a0490e6e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 12:15:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

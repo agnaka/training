@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1329491_training.userDuplicateRegister</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Não permitir calendário duplicado.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>userDuplicateRegister</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var userDuplicateRegister = Class.create();
+userDuplicateRegister.prototype = {
+    initialize: function() {
+    },
+    getAvailableCourses: function() {
+        var registeredTrainingNotToBeShown = [];
+		var currentUser = gs.getUserID(); // ID do usuário atual
+
+		var today = new GlideDate();
+		today.setValue(new GlideDateTime().getLocalDate().toString());
+		var currentDate = today.getValue();
+
+        var grReg = new GlideRecord('x_1329491_training_registration');
+        grReg.addEncodedQuery("opened_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe^state!=4");
+        grReg.query();
+
+        while (grReg.next()) {
+            registeredTrainingNotToBeShown.push(grReg.training.sys_id.toString());
+        }
+
+        var registeredTrainingToBeShown = [];
+        var grTraining = new GlideRecord("x_1329491_training_training_calendar");
+		grTraining.addQuery('date', '>', today);
+        grTraining.addQuery('instructor', '!=', currentUser); // já está filtrando qunado usuário == instrutor
+        
+        grTraining.query();
+
+        while (grTraining.next()) {
+			if (registeredTrainingNotToBeShown.indexOf(grTraining.getUniqueValue()) == -1) {
+				var grRegTotalCalendar = new GlideRecord('x_1329491_training_registration');
+				grRegTotalCalendar.addQuery('training', grTraining.getUniqueValue());
+				grRegTotalCalendar.addQuery('state', '!=', '4');
+
+				grRegTotalCalendar.query();
+
+				if (grRegTotalCalendar.getRowCount() < grTraining.getValue('available_seats')) {
+					var grCalendarList = new GlideRecord("x_1329491_training_training_calendar");
+					var calendarList = [];
+					grCalendarList.addQuery('training', grTraining.training);
+
+					grCalendarList.query();
+
+					while (grCalendarList.next()) {
+						calendarList.push(grCalendarList.getUniqueValue());
+					}
+
+					var grRegTotalSameTraining = new GlideRecord('x_1329491_training_registration');
+					grRegTotalSameTraining.addEncodedQuery("opened_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe^trainingIN" + calendarList.join(','));
+					//grRegTotalSameTraining.addQuery('state', '!=', '4'); reprovados não excluidos
+					grRegTotalSameTraining.query();
+
+					if (grRegTotalSameTraining.getRowCount() < 3) {
+
+						registeredTrainingToBeShown.push(grTraining.getUniqueValue());
+					}
+				}
+
+			}
+           
+  
+        }
+        return 'sys_idIN' + registeredTrainingToBeShown.join(',');
+    },
+
+    type: 'userDuplicateRegister'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 14:31:48</sys_created_on>
+        <sys_id>f4c5e7035357d2104d3491e0a0490e33</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>userDuplicateRegister</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_update_name>sys_script_include_f4c5e7035357d2104d3491e0a0490e33</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 03:09:13</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>f4c5e7035357d2104d3491e0a0490e33</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 14:31:48</sys_created_on>
+        <sys_id>c986e7035357d2104d3491e0a0490e37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 14:31:48</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

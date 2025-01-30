@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_1329491_training.target_lang</name>
+        <read_roles/>
+        <suffix>target_lang</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 21:39:10</sys_created_on>
+        <sys_id>2208cd9b531fd2104d3491e0a0490e57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1329491_training.target_lang</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_update_name>sys_properties_2208cd9b531fd2104d3491e0a0490e57</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 21:39:10</sys_updated_on>
+        <type>string</type>
+        <value>en</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=2208cd9b531fd2104d3491e0a0490e57"/>
+</record_update>

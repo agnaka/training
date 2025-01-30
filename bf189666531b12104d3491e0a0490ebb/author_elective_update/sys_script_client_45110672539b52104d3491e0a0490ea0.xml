@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>date</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Show Duplicate error message</name>
+        <order/>
+        <script><![CDATA[function onChange(newValue, isLoading) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+ 
+   var training = g_form.getValue("training");
+   var date = g_form.getValue("date");
+ 
+   if (!training || !date) {
+      return;
+   }
+ 
+   date = convertToSystemDate(date);
+ 
+   var ga = new GlideAjax("duplicateCourseDate");
+   ga.addParam('sysparm_name', 'checkDuplicateSchedule');
+   ga.addParam('sysparm_course', training);
+   ga.addParam('sysparm_date', date);
+ 
+   ga.getXMLAnswer(function(answer) {
+      if (answer === 'true') {
+         g_form.setValue("date", "");
+         g_form.showErrorBox("date","Já existe um treinamento deste curso agendado para esta data", true);
+      }
+   });
+}
+ 
+function convertToSystemDate (dateStr) {
+ 
+    var parts = dateStr.split('/');
+    if (parts.length === 3) {
+ 
+        return parts[2] + '-' + parts[1] + '-' + parts[0];
+    }
+ 
+    return dateStr;
+}
+ ]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 12:33:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>45110672539b52104d3491e0a0490ea0</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Show Duplicate error message</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_update_name>sys_script_client_45110672539b52104d3491e0a0490ea0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 18:50:35</sys_updated_on>
+        <table>x_1329491_training_training_calendar</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training">bf189666531b12104d3491e0a0490ebb</application>
+        <file_path/>
+        <instance_id>c2f13af1db014a5437d72a59139619f8</instance_id>
+        <instance_name>dev247250</instance_name>
+        <name>sys_script_client_45110672539b52104d3491e0a0490ea0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;date&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Show Duplicate error message&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(newValue, isLoading) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+ 
+   var training = g_form.getValue("training");
+   var date = g_form.getValue("date");
+ 
+   if (!training || !date) {
+      return;
+   }
+ 
+   date = convertToSystemDate(date);
+ 
+   var ga = new GlideAjax("duplicateCourseDate");
+   ga.addParam('sysparm_name', 'checkDuplicateSchedule');
+   ga.addParam('sysparm_course', training);
+   ga.addParam('sysparm_date', date);
+ 
+   ga.getXMLAnswer(function(answer) {
+      if (answer === 'true') {
+         g_form.setValue("date", "");
+         g_form.showErrorBox("date","Já existe um treinamento deste curso agendado para esta data", true);
+      }
+   });
+}
+ 
+function convertToSystemDate (dateStr) {
+ 
+    var parts = dateStr.split('/');
+    if (parts.length === 3) {
+ 
+        return parts[2] + '-' + parts[1] + '-' + parts[0];
+    }
+ 
+    return dateStr;
+}
+ ]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-28 12:33:43&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;45110672539b52104d3491e0a0490ea0&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Show Duplicate error message&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Training" source="x_1329491_training"&gt;bf189666531b12104d3491e0a0490ebb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Training"&gt;bf189666531b12104d3491e0a0490ebb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_45110672539b52104d3491e0a0490ea0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-28 18:50:35&lt;/sys_updated_on&gt;&lt;table&gt;x_1329491_training_training_calendar&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1518936227</payload_hash>
+        <record_name>Show Duplicate error message</record_name>
+        <reverted_from/>
+        <source>61633a66539b12104d3491e0a0490ee0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 18:50:35</sys_created_on>
+        <sys_id>4628573e531392104d3491e0a0490e05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194ae40464c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 18:50:35</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>ca28573e6b13921056a5134d23d73804</update_guid>
+        <update_guid_history>ca28573e6b13921056a5134d23d73804:-1518936227,494e4732aa139210e7fb7c38dd2ac2c7:439947310,06edb63ec69f5210b70701c4dcbf1067:-1381499775,38f7cab69a9b5210fa19bd2ef9dc9140:-1942088911,64460af6f19b521069f06eebf3aa6dbf:-431103836,8865c676a49b52108bd6bb2eacc05c85:465551444,ca83c2366d9b5210fd971f0cf958dd7e:1445493876,65e1467ebb5b5210a32a6fa44c8f9c16:1653493424</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 20:27:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>1ae67f47e8774528b13bb1ecd1c7bb90</sys_id>
+        <sys_metadata>45110672539b52104d3491e0a0490ea0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Show Duplicate error message</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_parent display_value="Training_Calendar">35fc96ea531b12104d3491e0a0490e48</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_scope_delete display_value="">60c738f1bfe2456081b63b7764201040</sys_scope_delete>
+        <sys_update_name>sys_script_client_45110672539b52104d3491e0a0490ea0</sys_update_name>
+        <sys_update_version display_value="sys_script_client_45110672539b52104d3491e0a0490ea0">4628573e531392104d3491e0a0490e05</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 20:27:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

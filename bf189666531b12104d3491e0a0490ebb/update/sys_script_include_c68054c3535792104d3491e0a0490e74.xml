@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_1329491_training.userCalendarFilter</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>userCalendarFilter</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var userCalendarFilter = Class.create();
+userCalendarFilter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    initialize: function() {},
+
+    getAvailableCourses: function() {
+		var currentUser = gs.getUserID();
+        var dados = [];
+        var today = new GlideDate();
+		today.setValue(new GlideDateTime().getLocalDate().toString());
+		var currentDate = today.getValue();
+
+        var trainingCalendar = new GlideRecord('x_1329491_training_training_calendar');
+        trainingCalendar.addQuery('date', '>', today);
+        trainingCalendar.addQuery('instructor', '!=', currentUser);
+        trainingCalendar.query();
+
+        while (trainingCalendar.next()) {
+            var calendarId = trainingCalendar.getUniqueValue();
+
+            var registrations = new GlideRecord('x_1329491_training_registration');
+            registrations.addQuery('training', calendarId);
+            registrations.addQuery('state', '!=', '4');
+            registrations.query();
+
+            if (registrations.getRowCount() < trainingCalendar.available_seats) {
+                var courseCount = new GlideAggregate('x_1329491_training_registration');
+                courseCount.addQuery('training', trainingCalendar.training);
+                courseCount.addQuery('opened_by', currentUser);
+                courseCount.addQuery('state', '!=', '4');
+                courseCount.addAggregate('COUNT');
+                courseCount.query();
+
+                if (courseCount.next() && courseCount.getAggregate('COUNT') < 3) {
+                    var sameDayRegistrations = new GlideRecord('x_1329491_training_registration');
+                    sameDayRegistrations.addQuery('training', calendarId);
+                    sameDayRegistrations.addQuery('opened_by', currentUser);
+                    sameDayRegistrations.addQuery('state', '!=', '4');
+                    sameDayRegistrations.query();
+
+                    if (!sameDayRegistrations.hasNext()) {
+                        dados.push({
+                            sys_id: calendarId,
+                            nome: trainingCalendar.getDisplayValue('default_value')
+                            //data: trainingCalendar.data_curso.toString()
+                        });
+                    }
+                }
+            }
+        }
+        return JSON.stringify(dados);
+    },
+
+    type: 'userCalendarFilter'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 23:34:48</sys_created_on>
+        <sys_id>c68054c3535792104d3491e0a0490e74</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>userCalendarFilter</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_update_name>sys_script_include_c68054c3535792104d3491e0a0490e74</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 00:01:58</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>c68054c3535792104d3491e0a0490e74</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 23:34:48</sys_created_on>
+        <sys_id>1d3954cb535792104d3491e0a0490e35</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 23:34:48</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
