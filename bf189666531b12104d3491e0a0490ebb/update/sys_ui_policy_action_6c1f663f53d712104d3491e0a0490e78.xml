@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>available_seats</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 18:25:09</sys_created_on>
+        <sys_id>6c1f663f53d712104d3491e0a0490e78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>available_seats</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_update_name>sys_ui_policy_action_6c1f663f53d712104d3491e0a0490e78</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 18:25:09</sys_updated_on>
+        <table>x_1329491_training_training_calendar</table>
+        <ui_policy display_value="All fields mandatory">748e2efb53d712104d3491e0a0490e4e</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=6c1f663f53d712104d3491e0a0490e78"/>
+</record_update>

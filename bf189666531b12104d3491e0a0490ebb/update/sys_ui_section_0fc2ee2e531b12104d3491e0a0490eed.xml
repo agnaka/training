@@ -4,13 +4,13 @@
             <element>process_flow.xml</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>3e9a434353d3d2104d3491e0a0490e67</sys_id>
+            <sys_created_on>2025-01-31 18:31:33</sys_created_on>
+            <sys_id>5490babf53d712104d3491e0a0490e78</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Process Flow Training">99770cfe531352104d3491e0a0490ec5</sys_ui_formatter>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
+            <sys_updated_on>2025-01-31 18:31:33</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>.begin_split</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>be9a434353d3d2104d3491e0a0490e68</sys_id>
+            <sys_created_on>2025-01-31 18:31:33</sys_created_on>
+            <sys_id>5490babf53d712104d3491e0a0490e79</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
+            <sys_updated_on>2025-01-31 18:31:33</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>number</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>b69a434353d3d2104d3491e0a0490e69</sys_id>
+            <sys_created_on>2025-01-31 18:31:33</sys_created_on>
+            <sys_id>e890babf53d712104d3491e0a0490e79</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
+            <sys_updated_on>2025-01-31 18:31:33</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>be9a434353d3d2104d3491e0a0490e69</sys_id>
+            <sys_created_on>2025-01-31 18:31:33</sys_created_on>
+            <sys_id>6090babf53d712104d3491e0a0490e7a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
+            <sys_updated_on>2025-01-31 18:31:33</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>state</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>b69a434353d3d2104d3491e0a0490e6a</sys_id>
+            <sys_created_on>2025-01-31 18:31:33</sys_created_on>
+            <sys_id>e490babf53d712104d3491e0a0490e7a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
+            <sys_updated_on>2025-01-31 18:31:33</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>opened_by</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>be9a434353d3d2104d3491e0a0490e6a</sys_id>
+            <sys_created_on>2025-01-31 18:31:33</sys_created_on>
+            <sys_id>6c90babf53d712104d3491e0a0490e7a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
+            <sys_updated_on>2025-01-31 18:31:33</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>.end_split</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>b69a434353d3d2104d3491e0a0490e6b</sys_id>
+            <sys_created_on>2025-01-31 18:31:33</sys_created_on>
+            <sys_id>e090babf53d712104d3491e0a0490e7b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
+            <sys_updated_on>2025-01-31 18:31:33</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -102,41 +102,27 @@
             <element>training</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>be9a434353d3d2104d3491e0a0490e6b</sys_id>
+            <sys_created_on>2025-01-31 18:31:33</sys_created_on>
+            <sys_id>6890babf53d712104d3491e0a0490e7b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>description</element>
-            <position>8</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>b69a434353d3d2104d3491e0a0490e6c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
+            <sys_updated_on>2025-01-31 18:31:33</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>reproval_reason</element>
-            <position>9</position>
+            <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-29 12:29:52</sys_created_on>
-            <sys_id>be9a434353d3d2104d3491e0a0490e6c</sys_id>
+            <sys_created_on>2025-01-31 18:31:33</sys_created_on>
+            <sys_id>ec90babf53d712104d3491e0a0490e7b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_registration" sys_domain="global" view="Default view">0fc2ee2e531b12104d3491e0a0490eed</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-29 12:29:52</sys_updated_on>
+            <sys_updated_on>2025-01-31 18:31:33</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

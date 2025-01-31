@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="aec2e6a2535b12104d3491e0a0490edc" extends="task" label="Registration" max_length="40" name="x_1329491_training_registration" type="collection">
         <element label="Reproval Reason" max_length="4000" name="reproval_reason" type="string"/>
-        <element display="true" label="Training" max_length="32" name="training" reference="x_1329491_training_training_calendar" reference_qual="javascript: new userDuplicateRegister().getAvailableCourses();" type="reference" use_reference_qualifier="advanced"/>
+        <element display="true" label="Training" max_length="32" name="training" reference="x_1329491_training_training_calendar" type="reference"/>
     </element>
 </database>
