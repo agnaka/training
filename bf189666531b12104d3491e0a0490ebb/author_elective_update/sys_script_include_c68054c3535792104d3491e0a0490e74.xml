@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_1329491_training.userCalendarFilter</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>userCalendarFilter</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var userCalendarFilter = Class.create();
+userCalendarFilter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    initialize: function() {},
+
+    getAvailableCourses: function() {
+		var currentUser = gs.getUserID();
+        var dados = [];
+        var today = new GlideDate();
+		today.setValue(new GlideDateTime().getLocalDate().toString());
+		var currentDate = today.getValue();
+
+        var trainingCalendar = new GlideRecord('x_1329491_training_training_calendar');
+        trainingCalendar.addQuery('date', '>', today);
+        trainingCalendar.addQuery('instructor', '!=', currentUser);
+        trainingCalendar.query();
+
+        while (trainingCalendar.next()) {
+            var calendarId = trainingCalendar.getUniqueValue();
+
+            var registrations = new GlideRecord('x_1329491_training_registration');
+            registrations.addQuery('training', calendarId);
+            registrations.addQuery('state', '!=', '4');
+            registrations.query();
+
+            if (registrations.getRowCount() < trainingCalendar.available_seats) {
+                var courseCount = new GlideAggregate('x_1329491_training_registration');
+                courseCount.addQuery('training', trainingCalendar.training);
+                courseCount.addQuery('opened_by', currentUser);
+                courseCount.addQuery('state', '!=', '4');
+                courseCount.addAggregate('COUNT');
+                courseCount.query();
+
+                if (courseCount.next() && courseCount.getAggregate('COUNT') < 3) {
+                    var sameDayRegistrations = new GlideRecord('x_1329491_training_registration');
+                    sameDayRegistrations.addQuery('training', calendarId);
+                    sameDayRegistrations.addQuery('opened_by', currentUser);
+                    sameDayRegistrations.addQuery('state', '!=', '4');
+                    sameDayRegistrations.query();
+
+                    if (!sameDayRegistrations.hasNext()) {
+                        dados.push({
+                            sys_id: calendarId,
+                            nome: trainingCalendar.getDisplayValue('default_value')
+                            //data: trainingCalendar.data_curso.toString()
+                        });
+                    }
+                }
+            }
+        }
+        return JSON.stringify(dados);
+    },
+
+    type: 'userCalendarFilter'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 23:34:48</sys_created_on>
+        <sys_id>c68054c3535792104d3491e0a0490e74</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>userCalendarFilter</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_update_name>sys_script_include_c68054c3535792104d3491e0a0490e74</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 00:01:58</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>c68054c3535792104d3491e0a0490e74</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 23:34:48</sys_created_on>
+        <sys_id>1d3954cb535792104d3491e0a0490e35</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 23:34:48</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training">bf189666531b12104d3491e0a0490ebb</application>
+        <file_path/>
+        <instance_id>c2f13af1db014a5437d72a59139619f8</instance_id>
+        <instance_name>dev247250</instance_name>
+        <name>sys_script_include_c68054c3535792104d3491e0a0490e74</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_1329491_training.userCalendarFilter&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;userCalendarFilter&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var userCalendarFilter = Class.create();
+userCalendarFilter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    initialize: function() {},
+
+    getAvailableCourses: function() {
+		var currentUser = gs.getUserID();
+        var dados = [];
+        var today = new GlideDate();
+		today.setValue(new GlideDateTime().getLocalDate().toString());
+		var currentDate = today.getValue();
+
+        var trainingCalendar = new GlideRecord('x_1329491_training_training_calendar');
+        trainingCalendar.addQuery('date', '&gt;', today);
+        trainingCalendar.addQuery('instructor', '!=', currentUser);
+        trainingCalendar.query();
+
+        while (trainingCalendar.next()) {
+            var calendarId = trainingCalendar.getUniqueValue();
+
+            var registrations = new GlideRecord('x_1329491_training_registration');
+            registrations.addQuery('training', calendarId);
+            registrations.addQuery('state', '!=', '4');
+            registrations.query();
+
+            if (registrations.getRowCount() &lt; trainingCalendar.available_seats) {
+                var courseCount = new GlideAggregate('x_1329491_training_registration');
+                courseCount.addQuery('training', trainingCalendar.training);
+                courseCount.addQuery('opened_by', currentUser);
+                courseCount.addQuery('state', '!=', '4');
+                courseCount.addAggregate('COUNT');
+                courseCount.query();
+
+                if (courseCount.next() &amp;&amp; courseCount.getAggregate('COUNT') &lt; 3) {
+                    var sameDayRegistrations = new GlideRecord('x_1329491_training_registration');
+                    sameDayRegistrations.addQuery('training', calendarId);
+                    sameDayRegistrations.addQuery('opened_by', currentUser);
+                    sameDayRegistrations.addQuery('state', '!=', '4');
+                    sameDayRegistrations.query();
+
+                    if (!sameDayRegistrations.hasNext()) {
+                        dados.push({
+                            sys_id: calendarId,
+                            nome: trainingCalendar.getDisplayValue('default_value')
+                            //data: trainingCalendar.data_curso.toString()
+                        });
+                    }
+                }
+            }
+        }
+        return JSON.stringify(dados);
+    },
+
+    type: 'userCalendarFilter'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-28 23:34:48&lt;/sys_created_on&gt;&lt;sys_id&gt;c68054c3535792104d3491e0a0490e74&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;userCalendarFilter&lt;/sys_name&gt;&lt;sys_package display_value="Training" source="x_1329491_training"&gt;bf189666531b12104d3491e0a0490ebb&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Training"&gt;bf189666531b12104d3491e0a0490ebb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_c68054c3535792104d3491e0a0490e74&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-30 00:01:58&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;c68054c3535792104d3491e0a0490e74&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-28 23:34:48&lt;/sys_created_on&gt;&lt;sys_id&gt;1d3954cb535792104d3491e0a0490e35&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-28 23:34:48&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-891001844</payload_hash>
+        <record_name>userCalendarFilter</record_name>
+        <reverted_from/>
+        <source>61633a66539b12104d3491e0a0490ee0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 00:01:59</sys_created_on>
+        <sys_id>d509e9d353dfd2104d3491e0a0490eac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194b483b9440000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 00:01:59</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>d909e9d3c6dfd2108814267bd9ac55ab</update_guid>
+        <update_guid_history>d909e9d3c6dfd2108814267bd9ac55ab:-891001844,7027ad9f909fd21044ba1f92b65a8b45:-232909511,4c17a15380dfd2104c1c273c2d9d83cc:-891001844,e594a3431057d2109c0e9ca70cf2af6e:1091328270,d6d2d983899b92101aff20d03b736cdb:-1370753215,57df894f965b9210b0a7401c211ec024:1238270918,f36d450fc65b9210dac5da802b82377b:1399862086,75eb098b2d5b92105056d88252443aac:-2138945246,a6c47c8fdbd79210b11c354747f3cb34:1413736768,690cdc4b7557921034a60048fa7c50f5:932688443,f539d84fff5792101516623a8f7dd62a:1693328745</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 12:12:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>4b4cfd8014f246aca2bd192695707b29</sys_id>
+        <sys_metadata>c68054c3535792104d3491e0a0490e74</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>userCalendarFilter</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_scope_delete display_value="">60c738f1bfe2456081b63b7764201040</sys_scope_delete>
+        <sys_update_name>sys_script_include_c68054c3535792104d3491e0a0490e74</sys_update_name>
+        <sys_update_version display_value="sys_script_include_c68054c3535792104d3491e0a0490e74">d509e9d353dfd2104d3491e0a0490eac</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 12:12:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

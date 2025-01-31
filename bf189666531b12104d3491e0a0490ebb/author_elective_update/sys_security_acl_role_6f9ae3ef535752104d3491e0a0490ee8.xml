@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 04:08:24</sys_created_on>
+        <sys_id>6f9ae3ef535752104d3491e0a0490ee8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_1329491_training.admin</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_security_acl display_value="">de9a63ef535752104d3491e0a0490e17</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_6f9ae3ef535752104d3491e0a0490ee8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 04:08:24</sys_updated_on>
+        <sys_user_role display_value="x_1329491_training.admin" name="x_1329491_training.admin">44289666531b12104d3491e0a0490ef4</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training">bf189666531b12104d3491e0a0490ebb</application>
+        <file_path/>
+        <instance_id>c2f13af1db014a5437d72a59139619f8</instance_id>
+        <instance_name>dev247250</instance_name>
+        <name>sys_security_acl_role_6f9ae3ef535752104d3491e0a0490ee8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-31 04:08:24</sys_created_on><sys_id>6f9ae3ef535752104d3491e0a0490ee8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.x_1329491_training.admin</sys_name><sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package><sys_policy/><sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope><sys_security_acl display_value="">de9a63ef535752104d3491e0a0490e17</sys_security_acl><sys_update_name>sys_security_acl_role_6f9ae3ef535752104d3491e0a0490ee8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-31 04:08:24</sys_updated_on><sys_user_role display_value="x_1329491_training.admin" name="x_1329491_training.admin">44289666531b12104d3491e0a0490ef4</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1405798262</payload_hash>
+        <record_name>.x_1329491_training.admin</record_name>
+        <reverted_from/>
+        <source>61633a66539b12104d3491e0a0490ee0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 04:08:24</sys_created_on>
+        <sys_id>a40bebef535752104d3491e0a0490e41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194ba8bb0f90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 04:08:24</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>a80bebefaf575210146d9ec17581c340</update_guid>
+        <update_guid_history>a80bebefaf575210146d9ec17581c340:1405798262</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".x_1329491_training.admin">1a5192b7535712104d3491e0a0490ecc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 16:15:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>9615841119dc4fa692e8379a9b49e499</sys_id>
+        <sys_metadata>6f9ae3ef535752104d3491e0a0490ee8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_1329491_training.admin</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_scope_delete display_value="">60c738f1bfe2456081b63b7764201040</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_6f9ae3ef535752104d3491e0a0490ee8</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_6f9ae3ef535752104d3491e0a0490ee8">a40bebef535752104d3491e0a0490e41</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 16:15:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

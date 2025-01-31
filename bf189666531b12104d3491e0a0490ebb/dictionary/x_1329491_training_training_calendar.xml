@@ -4,6 +4,7 @@
         <element label="Available Seats" max_length="255" name="available_seats" type="integer"/>
         <element label="Training" max_length="32" name="training" reference="x_1329491_training_training" type="reference"/>
         <element label="Instructor" max_length="32" name="instructor" reference="sys_user" reference_qual="javascript: new getTrainingInstructorRole().getInstructorUser();" type="reference" use_reference_qualifier="advanced"/>
+        <element default="0" label="Seats filled" max_length="40" name="seats_filled" type="integer"/>
         <element label="Date" max_length="40" name="date" type="glide_date"/>
         <index name="index">
             <element name="instructor"/>

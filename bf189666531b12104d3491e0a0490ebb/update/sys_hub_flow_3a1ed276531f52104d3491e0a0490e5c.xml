@@ -2,7 +2,7 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>true</active>
+        <active>false</active>
         <annotation/>
         <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=213157000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>26000</authored_on_release_version>
@@ -15,10 +15,10 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>training</internal_name>
-        <label_cache>[{"name":"Created_1.current.additional_assignee_list","label":"Trigger - Record Created➛Registration Record➛Additional assignee list","reference":"sys_user","reference_display":"User","type":"glide_list","base_type":"glide_list","parent_table_name":"x_1329491_training_registration","column_name":"additional_assignee_list","usedInstances":{}},{"name":"Created_1.current.assignment_group.sys_created_by","label":"Trigger - Record Created➛Registration Record➛Assignment group➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"sys_user_group","column_name":"sys_created_by","usedInstances":{}},{"name":"Created_1.current.sys_created_by","label":"Trigger - Record Created➛Registration Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_1329491_training_registration","column_name":"sys_created_by","usedInstances":{"a249fd31-4799-4421-bd49-602e2f71b510":["conditions"],"39bbb557-fda0-4316-bf87-8aaeb2f6a5ba":["condition"]}},{"name":"9bbee920-54ee-4876-a97f-00158da5ea0a.approval_state","label":"6 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"0f7cd752-7307-4c40-ba42-6e1dd778626a":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.opened_by.manager","label":"Trigger - Record Created➛Registration Record➛Opened by➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"9bbee920-54ee-4876-a97f-00158da5ea0a":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Registration Record","reference":"x_1329491_training_registration","reference_display":"Registration","type":"reference","base_type":"reference","usedInstances":{"6174e4bb-7408-4233-bb64-c32e4a5f6e80":["record"],"321aa445-edb9-410f-b662-613b543511df":["record"],"9bbee920-54ee-4876-a97f-00158da5ea0a":["record"],"ee30fd64-3914-4518-83b9-d744dc723c87":["conditions"],"9fb0ad84-f2e8-47f9-86c2-3f4a610447b3":["record"],"25149fb5-5efa-4a0c-809b-451401c5eeee":["record"],"ded5b8ee-2f15-4c38-bc5d-547c42b139b6":["record"]},"attributes":{}},{"name":"9fb0ad84-f2e8-47f9-86c2-3f4a610447b3.record","label":"9 - Update Record➛Registration Record","reference":"x_1329491_training_registration","reference_display":"Registration","type":"reference","base_type":"reference","usedInstances":{"d4dd6c36-9a86-40d7-9476-7ac898b5784f":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"25149fb5-5efa-4a0c-809b-451401c5eeee.record","label":"12 - Update Record➛Registration Record","reference":"x_1329491_training_registration","reference_display":"Registration","type":"reference","base_type":"reference","usedInstances":{"125649f5-e562-4128-96e6-532c36299a47":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <label_cache>[{"name":"25149fb5-5efa-4a0c-809b-451401c5eeee.record","label":"12 - Update Record➛Registration Record","reference":"x_1329491_training_registration","reference_display":"Registration Record","type":"reference","base_type":"reference","usedInstances":{"125649f5-e562-4128-96e6-532c36299a47":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9fb0ad84-f2e8-47f9-86c2-3f4a610447b3.record","label":"9 - Update Record➛Registration Record","reference":"x_1329491_training_registration","reference_display":"Registration Record","type":"reference","base_type":"reference","usedInstances":{"d4dd6c36-9a86-40d7-9476-7ac898b5784f":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Registration Record","reference":"x_1329491_training_registration","reference_display":"Registration","type":"reference","base_type":"reference","usedInstances":{"6174e4bb-7408-4233-bb64-c32e4a5f6e80":["record"],"321aa445-edb9-410f-b662-613b543511df":["record"],"9bbee920-54ee-4876-a97f-00158da5ea0a":["record"],"ee30fd64-3914-4518-83b9-d744dc723c87":["conditions"],"9fb0ad84-f2e8-47f9-86c2-3f4a610447b3":["record"],"25149fb5-5efa-4a0c-809b-451401c5eeee":["record"],"ded5b8ee-2f15-4c38-bc5d-547c42b139b6":["record"]},"attributes":{}},{"name":"Created_1.current.opened_by.manager","label":"Trigger - Record Created➛Registration Record➛Opened by➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"9bbee920-54ee-4876-a97f-00158da5ea0a":["approval_conditions"]}},{"name":"9bbee920-54ee-4876-a97f-00158da5ea0a.approval_state","label":"6 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"0f7cd752-7307-4c40-ba42-6e1dd778626a":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_created_by","label":"Trigger - Record Created➛Registration Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_1329491_training_registration","column_name":"sys_created_by","usedInstances":{"a249fd31-4799-4421-bd49-602e2f71b510":["conditions"],"39bbb557-fda0-4316-bf87-8aaeb2f6a5ba":["condition"]}},{"name":"Created_1.current.assignment_group.sys_created_by","label":"Trigger - Record Created➛Registration Record➛Assignment group➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"sys_user_group","column_name":"sys_created_by","usedInstances":{}},{"name":"Created_1.current.additional_assignee_list","label":"Trigger - Record Created➛Registration Record➛Additional assignee list","reference":"sys_user","reference_display":"User","type":"glide_list","base_type":"glide_list","parent_table_name":"x_1329491_training_registration","column_name":"additional_assignee_list","usedInstances":{}}]</label_cache>
         <master_snapshot>0bb0aa3a531f52104d3491e0a0490efa</master_snapshot>
         <master_snapshot_digest/>
-        <name>Training</name>
+        <name>Training-old</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
@@ -28,7 +28,7 @@
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>published</status>
+        <status>draft</status>
         <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -36,15 +36,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3a1ed276531f52104d3491e0a0490e5c</sys_id>
-        <sys_mod_count>26</sys_mod_count>
-        <sys_name>Training</sys_name>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>Training-old</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
         <sys_update_name>sys_hub_flow_3a1ed276531f52104d3491e0a0490e5c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-31 01:49:36</sys_updated_on>
+        <sys_updated_on>2025-01-31 16:58:37</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow>
@@ -77,16 +77,16 @@
         <table>x_1329491_training_registration</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <active>false</active>
+        <data>{"run_on_extended":"false","run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any"}</data>
         <identifier>3a1ed276531f52104d3491e0a0490e5c</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-31 01:49:36</sys_created_on>
         <sys_id>6f3b4f6753d352104d3491e0a0490e0c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-31 01:49:36</sys_updated_on>
+        <sys_updated_on>2025-01-31 13:27:22</sys_updated_on>
         <trigger display_value="">1f412a7a531f52104d3491e0a0490e4d</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=3a1ed276531f52104d3491e0a0490e5c^sys_idNOT IN6f3b4f6753d352104d3491e0a0490e0c"/>
@@ -145,7 +145,7 @@
         <label>Record</label>
         <mandatory>true</mandatory>
         <max_length>200</max_length>
-        <model display_value="Training">3a1ed276531f52104d3491e0a0490e5c</model>
+        <model display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</model>
         <model_id>3a1ed276531f52104d3491e0a0490e5c</model_id>
         <model_table>sys_hub_flow</model_table>
         <name>var__m_sys_hub_flow_input_3a1ed276531f52104d3491e0a0490e5c</name>
@@ -229,7 +229,7 @@
         <label>Table Name</label>
         <mandatory>false</mandatory>
         <max_length>200</max_length>
-        <model display_value="Training">3a1ed276531f52104d3491e0a0490e5c</model>
+        <model display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</model>
         <model_id>3a1ed276531f52104d3491e0a0490e5c</model_id>
         <model_table>sys_hub_flow</model_table>
         <name>var__m_sys_hub_flow_input_3a1ed276531f52104d3491e0a0490e5c</name>
@@ -279,7 +279,7 @@
     <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <name>Created</name>
         <remote_sys_id/>
         <sys_created_by>admin</sys_created_by>
@@ -302,7 +302,7 @@
         <comment>Busca o registro reprovado.</comment>
         <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <generation_source/>
         <order>8</order>
         <parent_ui_id>0f7cd752-7307-4c40-ba42-6e1dd778626a</parent_ui_id>
@@ -324,7 +324,7 @@
         <comment/>
         <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <generation_source/>
         <order>3</order>
         <parent_ui_id>39bbb557-fda0-4316-bf87-8aaeb2f6a5ba</parent_ui_id>
@@ -346,7 +346,7 @@
         <comment>Atualiza o campo para Reproved.</comment>
         <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <generation_source/>
         <order>9</order>
         <parent_ui_id>0f7cd752-7307-4c40-ba42-6e1dd778626a</parent_ui_id>
@@ -368,7 +368,7 @@
         <comment>Se não atualiza o State para aprovado.</comment>
         <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <generation_source/>
         <order>12</order>
         <parent_ui_id>f0e1cba8-1c56-474c-b298-c46518e5763b</parent_ui_id>
@@ -390,7 +390,7 @@
         <comment>Atualiza o State para Awaiying Manger's Approval</comment>
         <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <generation_source/>
         <order>5</order>
         <parent_ui_id>60a16ded-aa8e-499d-aeab-7541d84f73c6</parent_ui_id>
@@ -412,7 +412,7 @@
         <comment>Envia notificação.</comment>
         <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <generation_source/>
         <order>10</order>
         <parent_ui_id>0f7cd752-7307-4c40-ba42-6e1dd778626a</parent_ui_id>
@@ -434,7 +434,7 @@
         <comment>Envia notificação ao usuário que foi registrada a solicitação e deve aguardar aprovação do seu Manager</comment>
         <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <generation_source/>
         <order>1</order>
         <parent_ui_id/>
@@ -456,7 +456,7 @@
         <comment>Envia notificação da aprovação.</comment>
         <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <generation_source/>
         <order>13</order>
         <parent_ui_id>f0e1cba8-1c56-474c-b298-c46518e5763b</parent_ui_id>
@@ -478,7 +478,7 @@
         <comment/>
         <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <generation_source/>
         <order>6</order>
         <parent_ui_id>60a16ded-aa8e-499d-aeab-7541d84f73c6</parent_ui_id>
@@ -502,7 +502,7 @@
         <connected_to>0f7cd752-7307-4c40-ba42-6e1dd778626a</connected_to>
         <decision_table/>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
@@ -528,7 +528,7 @@
         <connected_to/>
         <decision_table/>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -554,7 +554,7 @@
         <connected_to/>
         <decision_table/>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -580,7 +580,7 @@
         <connected_to>39bbb557-fda0-4316-bf87-8aaeb2f6a5ba</connected_to>
         <decision_table/>
         <display_text/>
-        <flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</flow>
+        <flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</flow>
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
@@ -670,7 +670,7 @@
         <name>Training</name>
         <natlang/>
         <outputs/>
-        <parent_flow display_value="Training">3a1ed276531f52104d3491e0a0490e5c</parent_flow>
+        <parent_flow display_value="Training-old">3a1ed276531f52104d3491e0a0490e5c</parent_flow>
         <remote_trigger_id/>
         <run_as>system</run_as>
         <run_with_roles/>
