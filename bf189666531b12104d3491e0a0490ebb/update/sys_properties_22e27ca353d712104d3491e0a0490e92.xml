@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description/>
+        <description>header 'Content-Type</description>
         <ignore_cache>true</ignore_cache>
         <is_private>false</is_private>
-        <name>x_1329491_training.target_lang</name>
+        <name>x_1329491_training.Content-Type</name>
         <read_roles/>
-        <suffix>target_lang</suffix>
+        <suffix>Content-Type</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-29 21:39:10</sys_created_on>
-        <sys_id>2208cd9b531fd2104d3491e0a0490e57</sys_id>
+        <sys_created_on>2025-01-30 14:45:21</sys_created_on>
+        <sys_id>22e27ca353d712104d3491e0a0490e92</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_1329491_training.target_lang</sys_name>
+        <sys_name>x_1329491_training.Content-Type</sys_name>
         <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
-        <sys_update_name>sys_properties_2208cd9b531fd2104d3491e0a0490e57</sys_update_name>
+        <sys_update_name>sys_properties_22e27ca353d712104d3491e0a0490e92</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 21:39:10</sys_updated_on>
+        <sys_updated_on>2025-01-30 14:45:21</sys_updated_on>
         <type>string</type>
-        <value>en</value>
+        <value>application/json</value>
         <write_roles/>
     </sys_properties>
-    <sys_translated_text action="delete_multiple" query="documentkey=2208cd9b531fd2104d3491e0a0490e57"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=22e27ca353d712104d3491e0a0490e92"/>
 </record_update>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
         <category display_value="Training">df126bcf5317d2104d3491e0a0490e9f</category>
-        <order>100</order>
-        <property display_value="x_1329491_training.target_lang" name="x_1329491_training.target_lang">2208cd9b531fd2104d3491e0a0490e57</property>
+        <order>400</order>
+        <property display_value="x_1329491_training.x-rapidapi-host" name="x_1329491_training.x-rapidapi-host">05537ca353d712104d3491e0a0490e97</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-29 21:39:24</sys_created_on>
-        <sys_id>e868cddb531fd2104d3491e0a0490e73</sys_id>
+        <sys_created_on>2025-01-30 14:47:23</sys_created_on>
+        <sys_id>36a3382753d712104d3491e0a0490e69</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_1329491_training.target_lang.Training</sys_name>
+        <sys_name>x_1329491_training.x-rapidapi-host.Training</sys_name>
         <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
-        <sys_update_name>sys_properties_category_m2m_e868cddb531fd2104d3491e0a0490e73</sys_update_name>
+        <sys_update_name>sys_properties_category_m2m_36a3382753d712104d3491e0a0490e69</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 21:39:24</sys_updated_on>
+        <sys_updated_on>2025-01-30 14:47:23</sys_updated_on>
     </sys_properties_category_m2m>
 </record_update>

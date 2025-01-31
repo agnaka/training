@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="DELETE">
+        <category display_value="Training">df126bcf5317d2104d3491e0a0490e9f</category>
+        <order>100</order>
+        <property display_value="x_1329491_training.target_lang" name="x_1329491_training.target_lang">2208cd9b531fd2104d3491e0a0490e57</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 21:39:24</sys_created_on>
+        <sys_id>e868cddb531fd2104d3491e0a0490e73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1329491_training.target_lang.Training</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_e868cddb531fd2104d3491e0a0490e73</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 21:39:24</sys_updated_on>
+    </sys_properties_category_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training">bf189666531b12104d3491e0a0490ebb</application>
+        <file_path/>
+        <instance_id>c2f13af1db014a5437d72a59139619f8</instance_id>
+        <instance_name>dev247250</instance_name>
+        <name>sys_properties_category_m2m_e868cddb531fd2104d3491e0a0490e73</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="Training">df126bcf5317d2104d3491e0a0490e9f</category><order>100</order><property display_value="x_1329491_training.target_lang" name="x_1329491_training.target_lang">2208cd9b531fd2104d3491e0a0490e57</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-29 21:39:24</sys_created_on><sys_id>e868cddb531fd2104d3491e0a0490e73</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1329491_training.target_lang.Training</sys_name><sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package><sys_policy/><sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope><sys_update_name>sys_properties_category_m2m_e868cddb531fd2104d3491e0a0490e73</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-29 21:39:24</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+        <payload_hash>332370708</payload_hash>
+        <record_name>x_1329491_training.target_lang.Training</record_name>
+        <reverted_from/>
+        <source>61633a66539b12104d3491e0a0490ee0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 21:39:24</sys_created_on>
+        <sys_id>e068cddb531fd2104d3491e0a0490e76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194b4012f8b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 21:39:24</sys_updated_on>
+        <type>Category Property</type>
+        <update_guid>e468cddb821fd210e927b8277cd79e75</update_guid>
+        <update_guid_history>e468cddb821fd210e927b8277cd79e75:332370708</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 14:45:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties_category_m2m">sys_properties_category_m2m</sys_db_object>
+        <sys_id>b943393173ee42bfa7838e2e490d4081</sys_id>
+        <sys_metadata>e868cddb531fd2104d3491e0a0490e73</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1329491_training.target_lang.Training</sys_name>
+        <sys_package display_value="Training" source="x_1329491_training">bf189666531b12104d3491e0a0490ebb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Training">bf189666531b12104d3491e0a0490ebb</sys_scope>
+        <sys_scope_delete display_value="">60c738f1bfe2456081b63b7764201040</sys_scope_delete>
+        <sys_update_name>sys_properties_category_m2m_e868cddb531fd2104d3491e0a0490e73</sys_update_name>
+        <sys_update_version display_value="sys_properties_category_m2m_e868cddb531fd2104d3491e0a0490e73">e068cddb531fd2104d3491e0a0490e76</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 14:45:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

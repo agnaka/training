@@ -4,13 +4,13 @@
             <element>name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 19:45:43</sys_created_on>
-            <sys_id>fb2bd26a531b12104d3491e0a0490efc</sys_id>
+            <sys_created_on>2025-01-30 20:15:31</sys_created_on>
+            <sys_id>21ce7163535f12104d3491e0a0490ef3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_training" sys_domain="global" view="Default view">7e7ad22a531b12104d3491e0a0490ef8</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 19:45:43</sys_updated_on>
+            <sys_updated_on>2025-01-30 20:15:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>description_pt</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 19:45:43</sys_created_on>
-            <sys_id>fb2bd26a531b12104d3491e0a0490efd</sys_id>
+            <sys_created_on>2025-01-30 20:15:31</sys_created_on>
+            <sys_id>a5ce7163535f12104d3491e0a0490ef3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_training" sys_domain="global" view="Default view">7e7ad22a531b12104d3491e0a0490ef8</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 19:45:43</sys_updated_on>
+            <sys_updated_on>2025-01-30 20:15:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,27 @@
             <element>description_en</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 19:45:43</sys_created_on>
-            <sys_id>f32bd26a531b12104d3491e0a0490efe</sys_id>
+            <sys_created_on>2025-01-30 20:15:31</sys_created_on>
+            <sys_id>2dce7163535f12104d3491e0a0490ef3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_training" sys_domain="global" view="Default view">7e7ad22a531b12104d3491e0a0490ef8</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 19:45:43</sys_updated_on>
+            <sys_updated_on>2025-01-30 20:15:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>integration_error_message</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-30 20:15:31</sys_created_on>
+            <sys_id>a1ce7163535f12104d3491e0a0490ef4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1329491_training_training" sys_domain="global" view="Default view">7e7ad22a531b12104d3491e0a0490ef8</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-30 20:15:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
